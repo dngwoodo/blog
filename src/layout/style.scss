@@ -42,6 +42,7 @@ a {
         display: flex;
         flex-direction: column;
         align-items: center;
+        margin-top: 60px;
         @include content-max-width;
     }
 }
