@@ -19,14 +19,13 @@
 
     .mui-tabs {
       .MuiTab-root {
-        height: 40px;
         min-height: auto;
         min-width: auto;
         padding: 10px 12px;
         font-family: $font-family;
         color: var(--tab-text-color);
         font-weight: 500;
-        font-size: 17px;
+        font-size: 1rem;
         transition: all 200ms ease;
 
         :hover {
@@ -36,8 +35,8 @@
       }
 
       .Mui-selected {
-        background-color: var(--tab-selected-background-color);
-        color: var(--tab-hover-text-color);
+        background-color: var(--primary-100);
+        color: var(--primary-500);
         border-radius: 8px;
         font-weight: 600;
         transition: all 200ms ease;
