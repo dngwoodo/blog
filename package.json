@@ -5,6 +5,7 @@
   "version": "2.0.0",
   "author": "zoomkoding <zoomkoding@gmail.com>",
   "dependencies": {
+    "@emotion/react": "^11.7.1",
     "@mui/icons-material": "^5.1.0",
     "@mui/material": "^5.1.0",
     "gatsby": "^3.12.1",
