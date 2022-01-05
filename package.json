@@ -6,6 +6,7 @@
   "author": "zoomkoding <zoomkoding@gmail.com>",
   "dependencies": {
     "@emotion/react": "^11.7.1",
+    "@emotion/styled": "^11.6.0",
     "@mui/icons-material": "^5.1.0",
     "@mui/material": "^5.1.0",
     "gatsby": "^3.12.1",
