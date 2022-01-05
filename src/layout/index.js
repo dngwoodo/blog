@@ -21,16 +21,13 @@ const Layout = ({ children }) => {
       }
     }
   `);
-  const { title, author } = data.site.siteMetadata;
+  const { title } = data.site.siteMetadata;
 
   return (
     <div className="page-wrapper">
       <PageHeader siteTitle={title || `Title`} />
       <main className="page-content">{children}</main>
-      <PageFooter
-        author={author.name || `Author`}
-        githubUrl={author.social?.github || `https://www.github.com`}
-      />
+      <PageFooter/>
       <ThemeSwitch />
     </div>
   );
