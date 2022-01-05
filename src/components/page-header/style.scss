@@ -1,11 +1,20 @@
 @use '../../styles/mixins'as *;
 
 .page-header-wrapper {
+  z-index: 9999;
+  position: fixed;
+  background-color: var(--background-color);
+  top: 0;
   display: flex;
   justify-content: center;
   width: 100%;
   height: 60px;
+  border-bottom: 1px solid var(--basic-n-gray100);
+  padding: 0 15px;
 
+  @include md {
+    padding: 0;
+  }
 
   .page-header {
     display: flex;
@@ -15,13 +24,12 @@
 
     .link {
       font-weight: 700;
-      font-size: 17px;
+      font-size: 1.2rem;
       color: var(--primary-text-color);
+    }
 
-      @include md {
-        font-weight: 700;
-        font-size: 20px;
-      }
+    .link-title {
+      font-size: 1.5rem;
     }
 
     .trailing-section {
@@ -29,14 +37,19 @@
       align-items: center;
 
       .link {
+        font-weight: 600;
         margin-right: 10px;
+        &:last-of-type {
+          margin-right: 0;
+        }
 
         @include md {
           margin-right: 20px;
+          &:last-of-type {
+            margin-right: 20px;
+          }
         }
       }
-
-
     }
   }
 }
