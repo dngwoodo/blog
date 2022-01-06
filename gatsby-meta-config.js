@@ -6,7 +6,7 @@ module.exports = {
   ogImage: `https://www.hyungjoo.me/wp-content/uploads/TDB6D8VEV-UDB3TTWKS-d8dcd17f8b1f-512.jpeg`, // Path to your in the 'static' folder
   comments: {
     utterances: {
-      repo: ``, // `zoomkoding/zoomkoding-gatsby-blog`,
+      repo: `dngwoodo/blog`,
     },
   },
   ga: '0', // Google Analytics Tracking ID

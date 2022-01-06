@@ -1,9 +1,9 @@
 import React, { createRef, useEffect, useRef } from 'react';
 
 const src = 'https://utteranc.es/client.js';
-const branch = 'master';
+const branch = 'main';
 
-function Utterances({ repo, path }) {
+function Comments({ repo, path }) {
   const rootElm = createRef();
   const isUtterancesLoaded = useRef(false);
 
@@ -17,7 +17,7 @@ function Utterances({ repo, path }) {
       repo,
       branch,
       theme: JSON.parse(storedIsDarkMode) ? 'photon-dark' : 'github-light',
-      label: 'comment',
+      label: '✨💬✨',
       async: true,
       'issue-term': 'pathname',
       crossorigin: 'anonymous',
@@ -33,4 +33,4 @@ function Utterances({ repo, path }) {
   return <div className="utterances" ref={rootElm} />;
 }
 
-export default Utterances;
+export default Comments;

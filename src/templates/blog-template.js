@@ -6,10 +6,9 @@ import PostHeader from '../components/post-header';
 import PostNavigator from '../components/post-navigator';
 import Post from '../models/post';
 import PostContent from '../components/post-content';
-import Utterances from '../components/utterances';
+import Comments from '../components/comments';
 
 function BlogTemplate({ data }) {
-
   const curPost = new Post(data.cur);
   const prevPost = data.prev && new Post(data.prev);
   const nextPost = data.next && new Post(data.next);
@@ -21,8 +20,8 @@ function BlogTemplate({ data }) {
       <Seo title={curPost?.title} description={curPost?.excerpt} />
       <PostHeader post={curPost} timeToRead={curPost.timeToRead} />
       <PostContent html={curPost.html} />
+      {utterancesRepo && <Comments repo={utterancesRepo} path={curPost.slug} />}
       <PostNavigator prevPost={prevPost} nextPost={nextPost} />
-      {utterancesRepo && <Utterances repo={utterancesRepo} path={curPost.slug} />}
     </Layout>
   );
 }
