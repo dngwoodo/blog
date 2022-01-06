@@ -2,7 +2,7 @@ import { Link } from 'gatsby';
 import React from 'react';
 import './style.scss';
 
-function PostHeader({ post, viewCount }) {
+function PostHeader({ post, timeToRead }) {
   return (
     <header className="post-header">
       {post.emoji && <div className="emoji">{post.emoji}</div>}
@@ -14,8 +14,10 @@ function PostHeader({ post, viewCount }) {
           </span>{' '}
           <span>
             {post.date}
-            {viewCount && ` · ${viewCount} views`}
           </span>
+        </div>
+        <div>
+          {timeToRead} min read
         </div>
         <div className="categories">
           {post.categories.map((category) => (
