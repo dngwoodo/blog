@@ -2,7 +2,7 @@ module.exports = {
   title: `tech.inflab.com`,
   description: `인프랩 기술 블로그`,
   language: `ko`, // `ko`, `en` => currently support versions for Korean and English
-  siteUrl: `https://www.inlfearn.com`,
+  siteUrl: `https://tech.inflab.com`,
   ogImage: `https://www.hyungjoo.me/wp-content/uploads/TDB6D8VEV-UDB3TTWKS-d8dcd17f8b1f-512.jpeg`, // Path to your in the 'static' folder
   comments: {
     utterances: {
