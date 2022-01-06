@@ -1,1 +1,1 @@
-require('typeface-montserrat');
+require('/static/fonts/Pretendard/pretendard.css');
