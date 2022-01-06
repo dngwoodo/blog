@@ -16,7 +16,7 @@ function PostHeader({ post, timeToRead }) {
             {post.date}
           </span>
         </div>
-        <div>
+        <div className="info-middle">
           {timeToRead} min read
         </div>
         <div className="categories">
