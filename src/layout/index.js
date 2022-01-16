@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { ThemeProvider } from '@emotion/react';
 import { useStaticQuery, graphql } from 'gatsby';
 import PageHeader from '../components/page-header';
 import PageFooter from '../components/page-footer';
 import ThemeSwitch from '../components/theme-switch';
+import { getValueFromLocalStorage } from '../utils/localStorage';
 import './style.scss';
 
 const Layout = ({ children }) => {
@@ -23,13 +25,27 @@ const Layout = ({ children }) => {
   `);
   const { title } = data.site.siteMetadata;
 
+  const changeThemeMode = (themeMode) => {
+    setTheme((prevState) => ({
+      ...prevState,
+      themeMode,
+    }))
+  }
+
+  const [theme, setTheme] = useState({
+    themeMode: getValueFromLocalStorage('themeMode') || 'light',
+    changeThemeMode,
+  });
+
   return (
-    <div className="page-wrapper">
-      <PageHeader siteTitle={title || `Title`} />
-      <main className="page-content">{children}</main>
-      <PageFooter/>
-      <ThemeSwitch />
-    </div>
+    <ThemeProvider theme={theme}>
+      <div className="page-wrapper">
+        <PageHeader siteTitle={title || `Title`} />
+        <main className="page-content">{children}</main>
+        <PageFooter/>
+        <ThemeSwitch />
+      </div>
+    </ThemeProvider>
   );
 };
 
