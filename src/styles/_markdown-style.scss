@@ -199,10 +199,6 @@
   box-shadow: inset 0 -1px 0 #d1d5da;
 }
 
-.markdown h1, h2, h3, h4, h5, h6 {
-  padding-top: 100px;
-}
-
 .markdown h1 {
   font-size: 32px;
 }
@@ -665,8 +661,8 @@
 .markdown h4,
 .markdown h5,
 .markdown h6 {
-  margin-top: 24px;
   margin-bottom: 16px;
+  padding-top: 4.285rem;
   font-weight: bold;
   line-height: 1.25;
 }
