@@ -33,15 +33,15 @@ function PageHeader({ siteTitle }) {
               </Link>
             </div>
             <div className="trailing-section">
-              <Link className="link" to="https://inflearn.com">
+              <a className="link" href="https://inflearn.com" target="_blank">
                 인프런
-              </Link>
+              </a>
               <Link className="link" to="/posts">
                 포스트
               </Link>
-              <Link className="link" to="https://www.inflearn.com/pages?type=withus">
+              <a className="link" href="https://www.inflearn.com/pages?type=withus" target="_blank">
                 채용
-              </Link>
+              </a>
               <PostSearch
                 posts={data.allMarkdownRemark.edges.map(({ node }) => new Post(node, true))}
               />
