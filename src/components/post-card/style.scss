@@ -51,20 +51,13 @@
 
     .info {
       display: flex;
+      flex-wrap: wrap;
+      align-items: center;
       justify-content: space-between;
       font-size: 14px;
       color: var(--about-link-icon-color);
-
-      .categories {
-        display: flex;
-
-        .category {
-          margin-left: 4px;
-
-          &:hover {
-            text-decoration: underline;
-          }
-        }
+      .date {
+        margin: 0 5px 5px 0;
       }
     }
   }

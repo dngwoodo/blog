@@ -19,9 +19,11 @@
   }
 
   .categories {
+    margin-bottom: 10px;
     .category {
       margin-right: 4px;
-      font-weight: 600;
+      font-size: 1.1425rem;
+      font-weight: bold;
       color: var(--primary-text-color);
       text-decoration: underline;
     }

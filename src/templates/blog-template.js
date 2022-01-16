@@ -41,6 +41,7 @@ export const pageQuery = graphql`
         categories
         author
         emoji
+        tags
       }
       fields {
         slug

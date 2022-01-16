@@ -2,7 +2,7 @@ export default class Post {
   constructor(node) {
     const { id, html, excerpt, frontmatter, fields, timeToRead } = node;
     const { slug } = fields;
-    const { emoji, categories, title, author, date } = frontmatter;
+    const { emoji, categories, title, author, date, tags } = frontmatter;
 
     this.id = id;
     this.excerpt = excerpt;
@@ -14,5 +14,6 @@ export default class Post {
     this.date = date;
     this.categories = categories.split(' ');
     this.timeToRead = timeToRead;
+    this.tags = tags && tags.split(' ');
   }
 }

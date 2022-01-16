@@ -44,6 +44,7 @@ export const pageQuery = graphql`
             categories
             title
             date(formatString: "MMMM DD, YYYY")
+            tags
           }
           fields {
             slug
