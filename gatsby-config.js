@@ -120,6 +120,14 @@ module.exports = {
         ],
       },
     },
+    {
+      resolve: "gatsby-plugin-page-progress",
+      options: {
+        height: 3,
+        color: `#00c471`,
+        headerHeight: 60,
+      },
+    },
     `gatsby-theme-material-ui`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-advanced-sitemap`,
